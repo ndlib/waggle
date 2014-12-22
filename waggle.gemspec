@@ -17,12 +17,11 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 4.1.4"
+  s.add_dependency 'bootstrap-sass', '~> 3.3.1'
+  s.add_dependency 'autoprefixer-rails'
   s.add_dependency 'draper'
 
   s.add_development_dependency "mysql2"
   s.add_development_dependency "rspec-rails"
-  s.add_development_dependency 'bootstrap-sass', '~> 3.2.0'
-  s.add_development_dependency 'autoprefixer-rails'
   s.add_development_dependency 'pry'
-
 end
