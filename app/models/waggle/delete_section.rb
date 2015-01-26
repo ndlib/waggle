@@ -2,21 +2,24 @@ require 'draper'
 
 module Waggle
   class DeleteSection < Draper::Decorator
-    attr_accessor :name, :message
+    attr_accessor :name, :message, :path
 
     def display
       yield(self) if block_given?
 
-      h.render partial: 'shared/delete_section', locals: { name: name, message: message, path: object }
+      h.render partial: 'shared/delete_section', locals: { name: name, message: message, path: path }
     end
 
     def name
-      @name || 'Content'
+      @name || object.class.to_s
     end
 
     def message
-      @message || "Procede with caution. This will remove the content completely"
+      @message || "Procede with caution. This will remove the #{name} completely. "
     end
 
+    def path
+      @path || object
+    end
   end
 end
