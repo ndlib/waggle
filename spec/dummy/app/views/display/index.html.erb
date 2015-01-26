@@ -1,1 +1,8 @@
-hi
+
+<h2>Delete Example</h2>
+
+<%= Waggle::DeleteSection.new("/path/path").display do | ds |
+  ds.name = "Content"
+  ds.message = "Be careful when you delete this"
+end
+
