@@ -15,7 +15,7 @@ module Waggle
     end
 
     def message
-      @message || ""
+      @message || "Procede with caution. This will remove the content completely"
     end
 
   end
