@@ -15,7 +15,7 @@ module Waggle
     end
 
     def message
-      @message || "Procede with caution. This will remove the #{name} completely. "
+      @message || "Procede with caution. This will remove the #{name} and all associated data. "
     end
 
     def path

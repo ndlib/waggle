@@ -5,7 +5,7 @@ RSpec.describe Waggle::DeleteSection do
   let(:path) { "/path/path" }
 
   it "renders the delete section template" do
-    expect(subject.h).to receive(:render).with({:partial=>"shared/delete_section" ,:locals=>{:name=>"Content", :message=>"", :path=>"/path/path"}})
+    expect(subject.h).to receive(:render).with({:partial=>"shared/delete_section", :locals=>{:name=>"String", :message=>"Procede with caution. This will remove the String and all associated data. ", :path=>"/path/path"}})
     subject.display
   end
 
