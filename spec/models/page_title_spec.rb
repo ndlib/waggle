@@ -9,7 +9,7 @@ RSpec.describe Waggle::PageTitle do
   end
 
   it "sets the title in the partial " do
-    expect(subject.display).to eq("<div class=\"page-header\">\n  <h1>title<small></small></h1>\n</div>\n")
+    expect(subject.display).to eq("<div class=\"page-header\">\n  <h1>title <small></small></h1>\n</div>\n")
   end
 
   it "allows me to set a small_title" do
@@ -17,7 +17,7 @@ RSpec.describe Waggle::PageTitle do
       pt.small_title = 'small title'
     end
 
-    expect(txt).to eq("<div class=\"page-header\">\n  <h1>title<small>small title</small></h1>\n</div>\n")
+    expect(txt).to eq("<div class=\"page-header\">\n  <h1>title <small>small title</small></h1>\n</div>\n")
   end
 
   it "allows me to add link to the title" do
@@ -25,7 +25,7 @@ RSpec.describe Waggle::PageTitle do
       pt.link_href = 'href'
     end
 
-    expect(txt).to eq("<div class=\"page-header\">\n  <h1><a href=\"href\">title</a><small></small></h1>\n</div>\n")
+    expect(txt).to eq("<div class=\"page-header\">\n  <h1><a href=\"href\">title</a> <small></small></h1>\n</div>\n")
   end
 
 end
