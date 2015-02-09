@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   root to: 'display#index'
 
   resources :fun_models
+
+  resources :collection do
+
+    resources :items
+  end
 end

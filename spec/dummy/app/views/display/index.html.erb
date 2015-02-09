@@ -1,7 +1,6 @@
 
 <h2>Delete Example</h2>
 
-  <%= link_to "test", FunModel.new %>
 
 <%= Waggle::DeleteSection.new(FunModel.new).display do | ds |
   ds.name = "Content"
@@ -9,4 +8,3 @@
   ds.path = "path"
 end
 %>
-

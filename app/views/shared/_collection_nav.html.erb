@@ -1,11 +1,11 @@
-<div class="list-group">
-  <a href="<%= collection_items_path(path_object) %>" class="list-group-item <%= side_nav.test_active_tab?(active_tab, :items) %>">
-    <i class="glyphicon glyphicon-picture"></i>
-    Items
-  </a>
-  <a href="#" class="list-group-item <%= side_nav.test_active_tab?(active_tab, :exhibits) %>">
-    <i class="glyphicon glyphicon-th-large"></i>
-    Exhibits
-  </a>
-  <a href="<%= edit_collection_path(path_object) %>" class="list-group-item <%= side_nav.test_active_tab?(active_tab, :settings) %>"><i class="glyphicon glyphicon-cog"></i> Settings</i></a>
+<div class="navbar-header">
+   <a class="navbar-brand" href="/collections"><i class="glyphicon glyphicon-home"></i> honeycomb</a>
+</div>
+<div class="navbar-collapse collapse">
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="#"><i class="glyphicon glyphicon-user"></i> <%= nav.current_user_display_name
+    %></a></li>
+    <li><a href="<%= nav.users_path %>"><i class="glyphicon glyphicon-cog"></i></a></li>
+    <li><a href="#" title="logout"><i class="glyphicon glyphicon-log-out"></i></a></li>
+  </ul>
 </div>
