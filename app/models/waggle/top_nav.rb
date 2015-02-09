@@ -1,7 +1,7 @@
 require 'draper'
 
 module Waggle
-  class CollectionNav < Draper::Decorator
+  class TopNav < Draper::Decorator
 
     def display
       h.render partial: 'shared/collection_nav', locals: { controller: object, nav: self }
