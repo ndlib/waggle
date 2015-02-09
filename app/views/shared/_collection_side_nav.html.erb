@@ -3,7 +3,7 @@
     <i class="glyphicon glyphicon-picture"></i>
     Items
   </a>
-  <a href="#" class="list-group-item <%= side_nav.show_active_tab(:exhibits) %>">
+  <a href="<%= Waggle::DetermineDomain.call(:beehive) %>collections/<%= side_nav.object.collection_id %>" class="list-group-item <%= side_nav.show_active_tab(:exhibits) %>">
     <i class="glyphicon glyphicon-th-large"></i>
     Exhibits
   </a>
