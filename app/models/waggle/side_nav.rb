@@ -4,7 +4,7 @@ module Waggle
   class SideNav < Draper::Decorator
 
     def display(active_tab)
-      h.render partial: partial, locals: { side_nav: self, active_tab: active_tab }
+      h.render partial: partial, locals: { side_nav: self, active_tab: active_tab, object: object }
     end
 
     def test_active_tab?(current_tab, selected_tab)
