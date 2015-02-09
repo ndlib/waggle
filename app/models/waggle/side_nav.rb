@@ -9,8 +9,12 @@ module Waggle
       h.render(partial: partial, locals: { side_nav: self }) #object: self, as: :side_nav
     end
 
-    def test_active_tab?(selected_tab)
-      (active_tab == selected_tab)
+    def show_active_tab(test_tab)
+      if (active_tab == test_tab)
+        "active"
+      else
+        ""
+      end
     end
 
     private
