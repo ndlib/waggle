@@ -4,7 +4,7 @@ module Waggle
   class TopNav < Draper::Decorator
 
     def display
-      h.render partial: 'shared/collection_nav', locals: { controller: object, nav: self }
+      h.render partial: 'shared/top_nav', locals: { controller: object, nav: self }
     end
 
     def users_path
