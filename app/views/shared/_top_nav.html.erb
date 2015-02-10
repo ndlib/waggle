@@ -2,10 +2,17 @@
    <a class="navbar-brand" href="<%= Waggle::DetermineDomain.call(:honeycomb) %>collections"><i class="glyphicon glyphicon-home"></i> honeycomb</a>
 </div>
 <div class="navbar-collapse collapse">
-  <ul class="nav navbar-nav navbar-right">
-    <li><a href="#"><i class="glyphicon glyphicon-user"></i> <%= nav.current_user_display_name
-    %></a></li>
-    <li><a href="<%= nav.users_path %>"><i class="glyphicon glyphicon-cog"></i></a></li>
-    <li><a href="#" title="logout"><i class="glyphicon glyphicon-log-out"></i></a></li>
-  </ul>
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="<%= Waggle::DetermineDomain.call(:honeycomb) %>">Collections</a></li>
+      <li><a href="<%= Waggle::DetermineDomain.call(:beehive) %>">Exhibits </a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><i class="glyphicon glyphicon-user"></i> <%= nav.current_user_display_name
+      %></a></li>
+      <li><a href="<%= nav.users_path %>"><i class="glyphicon glyphicon-cog"></i></a></li>
+      <li><a href="#" title="logout"><i class="glyphicon glyphicon-log-out"></i></a></li>
+    </ul>
+  </div>
 </div>
