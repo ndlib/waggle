@@ -2,12 +2,12 @@ require 'draper'
 
 module Waggle
   class PageTitle < Draper::Decorator
-    attr_accessor :title, :small_title, :link_href
+    attr_accessor :title, :small_title, :link_href, :right_content
 
     def display()
       yield(self) if block_given?
 
-      h.render partial: 'shared/page_title', locals: { title: title_with_link, small_title: small_title }
+      h.render partial: 'shared/page_title', locals: { title: title_with_link, small_title: small_title, right_content: right_content }
     end
 
     private
