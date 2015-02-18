@@ -25,8 +25,8 @@ module Waggle
       def beehive
         if Rails.env == 'development'
           'http://localhost:3018/'
-        elsif Rails.env == 'staging'
-          'https://beehivepprd-vm.library.nd.edu/'
+        elsif Rails.env == 'pre_production'
+          'https://beehivepprd.library.nd.edu/'
         else
           'https://beehive.library.nd.edu/'
         end
@@ -35,7 +35,7 @@ module Waggle
       def honeycomb
         if Rails.env == 'development'
           'http://localhost:3017/'
-        elsif Rails.env == 'staging'
+        elsif Rails.env == 'pre_production'
           'https://honeycombpprd-vm.library.nd.edu/'
         else
           'https://honeycomb.library.nd.edu/'
