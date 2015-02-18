@@ -21,7 +21,7 @@ module Waggle
       end
 
       def small_title_with_link
-        if small_title
+        if small_title.present?
           if small_title_href
             h.raw("/ " + h.link_to(small_title, small_title_href))
           else
